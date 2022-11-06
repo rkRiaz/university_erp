@@ -1,0 +1,35 @@
+{
+  "name": "University ERP",
+  "homepage": ".",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "author": "rkRiaz",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.5.0",
+    "config": "^3.3.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.26",
+    "path": "^0.12.7"
+  },
+  "engines": {
+    "node": "12.16.1"
+  },
+  "description": ""
+}
